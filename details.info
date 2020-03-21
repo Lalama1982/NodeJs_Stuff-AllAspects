@@ -1,0 +1,12 @@
+(01) In terminal,"npm init" to generate the "package.json"
+(02) Install "nodemon" as a dev middleware, "npm i nodemon --save-dev"
+(03) Install "express" as a full/prod middleware, "npm i express@4"
+(04) Set the value in "config.env" as "NODE_ENV=devl" or "NODE_ENV=prod"
+(04) Execute the "js" file 
+    (a) node .\singleFile.js
+    (b) nodemon singleFile.js
+    (c) npm run start:dev
+
+
+"nodemon server.js"
+npm run start:dev

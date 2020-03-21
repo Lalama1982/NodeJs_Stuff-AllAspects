@@ -1,0 +1,45 @@
+extends base
+
+block content
+    //h1 This is "overviewStatic.pug" page [inheriting/extending "base.pug"]
+
+    main.main
+        .card-container 
+            .card
+                .card__header
+                    .card__picture
+                        .card__picture-overlay &nbsp;
+                        img.card__picture-img(src='/images/tour-1-1.jpg', alt='The Forest Hiker')
+                    h3.heading-tertirary
+                        span#cardTourName= `${dataPassed.tour_name}`
+
+                .card__details
+                    h4.card__sub-heading= `${dataPassed.difficulty} ${dataPassed.days}-day tour`
+                    p.card__text= `${dataPassed.tourDesc}`
+                    .card__data
+                        svg.card__icon
+                            use(xlink:href='/images/icons.svg#icon-map-pin')
+                        span= `${dataPassed.area}`
+                    .card__data
+                        svg.card__icon
+                            use(xlink:href='/images/icons.svg#icon-calendar')
+                        span= `${dataPassed.nextDate}`
+                    .card__data
+                        svg.card__icon
+                            use(xlink:href='/images/icons.svg#icon-flag')
+                        span= `${dataPassed.stops} stops`
+                    .card__data
+                        svg.card__icon
+                            use(xlink:href='/images/icons.svg#icon-user')
+                        span= `${dataPassed.participants} people`
+
+                .card__footer
+                    p
+                        span.card__footer-value= `$${dataPassed.rate}`
+                        | 
+                        span.card__footer-text per person
+                    p.card__ratings
+                        span.card__footer-value= `${dataPassed.rating}`
+                        | 
+                        span.card__footer-text rating (21)
+                    a.btn(id='anchorDtl', class='btn btn--green btn--small', href=`#`) Details

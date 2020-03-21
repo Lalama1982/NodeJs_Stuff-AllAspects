@@ -1,0 +1,22 @@
+{
+  "name": "json_processing_inloop",
+  "version": "1.0.0",
+  "description": "NodeJs Examples with JSON processing",
+  "main": "singleFile.js",
+  "scripts": {
+    "_comment": "below is to distinguish between devl or prod executions  e.g. npm run start:prod",
+    "singleFile:dev": "set NODE_ENV=devl&&nodemon singleFile.js",
+    "singleFile:prod": "set NODE_ENV=prod&&nodemon singleFile.js",
+    "debug": "ndb singleFile.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3",
+    "pug": "^2.0.4"
+  }
+}
